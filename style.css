@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+
+
+:root{
+    /*   Primary  colors    */
+    --Darker-Blue : hsl(217, 28%, 15%); /*(intro and email sign up background)*/
+    --Dark-Blue : hsl(218, 28%, 13%); /*(main background)*/
+    --footer-background : hsl(216, 53%, 9%);
+    --testimonials-background: hsl(219, 30%, 18%);
+
+/*       ### Accent        */
+
+    --Cyan : hsl(176, 68%, 64%); /*(inside call-to-action gradient)*/
+    --Blue: hsl(198, 60%, 50%); /*inside call-to-action gradient */
+    --Light-Red: hsl(0, 100%, 63%); /* error */
+    --Light-grey: #b8b8b8;/*a5a5a5;/*daddd8; /* Paragraphy text color*/
+
+    /**   ### Neutral     */
+
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: var(--White);
+    background-color: var(--Darker-Blue);
+}
+/*global stlying*/
+a{
+    text-decoration: none;
+    color: var(--White);
+}
+p{
+    color: var(--Light-grey);
+}
+section{
+    margin: 3vh 0;
+}
+button{
+    padding: .8em 2em;
+    background-color: var(--Blue);
+    font-weight: 700;
+    font-size: 1.1em;
+    color:var(--White);
+    border: none;
+    border-radius: 2em;
+}
+.error{
+    color: crimson;
+    font-size: .9em;
+    margin: .5em 0;
+    position: absolute;
+    bottom: 3% ;
+    left: 10%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: var(--Darker-Blue);
+}
+nav{
+    display: flex;
+    flex: row nowrap;
+    width: 100vw;
+    padding: 4VW 6vw; 
+    justify-content:space-between;
+}
+nav img{
+    width: 10%;
+}
+nav div{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav div a{
+    margin: 0 3%;
+}
+header .intro-img{
+    width: 40%;
+    /*margin: auto;*/
+}
+
+/***        STYLING GET STARTED SECTION             ***/
+.get-started{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 50vh;
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:  cover;
+    margin-bottom: 0;
+}
+.get-started h1{
+    width: 50vw;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.4em;
+    font-weight:700;
+    text-align:center;
+}
+.get-started p{
+    width: 30vw;
+    font-weight:400;
+    text-align:center;
+}
+/****************************   STYLING SERVICES SECTION   ****************************/
+.services-testimonials{
+    margin:0;
+    padding: 2em 15%;
+    background-color: var(--Dark-Blue);
+}
+.service-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5em 1em;
+}
+.grid-box{
+    padding: 1em;
+    text-align: center;
+}
+.grid-box h4, p{
+    margin: .7em 2.7em;
+}
+.productive-box{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3% 0;
+    gap: 1em;
+}
+.productive-box img{
+    width: 50%;
+}
+.productive-box div{
+    display: inline-flex;
+    width: 40%;
+    flex-flow: column wrap;
+    align-items: start;
+    justify-content: center;
+    gap: .4em;    
+}
+.productive-box div h2{
+    font-size: 2em;
+    font-weight: 700;
+}
+.productive-box div p{
+    margin-left: 0;
+}
+.productive-box div a{
+    display: block;
+    width: 100%;
+    position: relative;
+    color:var(--Cyan);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+.productive-box div a img{
+    display: inline-block;
+    width: 8%;
+    position: absolute;
+    top: -2px;
+    left : 127px;
+}
+
+/** testimonials**/
+
+.testimonials{
+    display:block;
+}
+.testominials-box{
+    display:grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: space-between;
+    position: relative;
+    bottom: 1em;
+    left: .7em;
+}
+.profile{
+    padding: 1em;
+    background-color: var(--testimonials-background);
+}
+.profile p{
+    margin: 0;
+    color: var(--Light-grey);
+}
+.profile img{
+    margin: 1em 0;
+    border-radius: 50% ;
+    width: 20%;
+    float: left;
+}
+.profile div{
+    display: inline-block;
+    margin: 1.3em .5em;
+}
+.profile div p:first-child{
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--White);
+}
+
+.e-access{
+    width: 70%;
+    padding: 2.5em;
+    background-color: var(--Darker-Blue);
+    margin:auto;
+    text-align: center;
+    position: relative;
+    top: 10em;
+}
+.e-access p{
+    font-size: .9em;
+    margin: 1.5em 0;
+}
+input{
+    padding: 10px;
+    width: 50%;
+    border-radius: 20px;
+    border: none;
+    margin: 0 2em 0 0;
+}
+.e-access button{
+    width: 40%;
+} 
+
+
+/****** styling the footer************/
+footer{
+    padding: 15% 10% 5% 10%;
+    background-color: var(--footer-background);
+}
+#footer-logo{
+    width:10%;
+}
+.footer-content{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr .7fr .7fr 1fr;
+
+}
+.footer-content div p{
+    margin-bottom: 1.4vh;
+    padding:0;
+}
+#address{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+#address img{
+    width: 1.5vw;
+    height: 4vh;
+}
+#address p{
+    display: inline;
+    width: 80%;
+} 
+.footer-content div p img{
+    margin-right: 1vw;
+}
+
+
+/**************** MEaxA QUERY FOR SCREEN SIZE WITH MAX-WIDTH OF 375PX***************************/
+@media screen and (max-width: 375px) {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    button{
+        width: 70vw;
+    }
+/********* END OF GLOBAL STYLING COMPONENTS   *****************/
+    nav{
+        display: flex;
+        flex: row nowrap;
+        width: 100vw;
+        padding: 4VW 6vw; 
+        justify-content:space-between;
+    }
+    nav img{
+        width: 15%;
+    }
+    nav div{
+        width: 75%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav div a{
+        margin: 0 1%;
+    }
+    header .intro-img{
+        width: 70%;
+        /*margin: auto;*/
+    }
+    
+/***        STYLING GET STARTED SECTION             ***/
+    .get-started{
+        height: 40vh;
+        background-image: url(images/bg-curvy-mobile.svg);
+        
+    }
+    .get-started h1{
+        width: 90vw;
+        
+        font-size: 1.7em;
+        
+    }
+    .get-started p{
+        width: 80vw;
+    }    
+    
+/****************************   STYLING SERVICES SECTION   ****************************/
+    .services-testimonials{
+        margin:0;
+        padding: 1em 0;
+    }
+    .service-grid{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2em;
+    }
+    .grid-box{
+        padding: 1em;
+        text-align: center;
+    }
+    .grid-box h4{
+        font-size: 1.2em;
+    }
+    .grid-box p{
+        font-size: 1.1em;
+    }
+    .productive-box{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }   
+    .productive-box img{
+        width: 80%;
+    }
+    .productive-box div{
+        display: inline-block;
+        width: 80%;
+        flex-flow: column;
+        align-items: start;
+        justify-content: center;
+        gap: .4em;    
+    }
+    .productive-box div h2{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .productive-box div p{
+        width: 100%;
+        font-size: 1.2em;
+    }
+    
+/** testimonials**/
+
+    .testimonials{
+        display:block;
+        padding: 0 5%;
+        margin-top: 10em;
+    }
+    .testominials-box{
+        display:grid;
+        grid-template-columns: 90%;
+        gap:1em;
+    }
+    .profile{
+        padding: 1em;
+        background-color: var(--testimonials-background);
+    }
+    .profile p{
+       font-size: 1.1em
+    }
+    .profile img{
+        margin: 1.6em 0;
+        border-radius: 50% ;
+        width: 15%;
+        float: left;
+    }
+  
+    .e-access{
+        width: 90%;
+        padding: 2.5em;
+    }
+    .e-access p{
+        font-size: 1.1em;
+        margin: 1.5em 0;
+    }
+    input{
+        padding: 15px;
+        width: 100%;
+        border-radius: 20px;
+        border: none;
+    }
+    .e-access button{
+        margin: 2em 0;
+        width: 80%;
+    } 
+    
+
+/****** styling the footer************/
+    footer{
+        padding: 5%;
+    }
+    #footer-logo{
+        margin-top: 10em;
+        width:40%;
+    }
+    .footer-content{
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: 100%;
+
+    }
+    .footer-content div{
+        margin: 1em 0;
+    }
+    .footer-content div p{
+        margin-bottom: 1.4vh;
+        font-size: 1.2em;
+    }
+    #address{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    #address img{
+        width: 4vw;
+        height: 4vh;
+    }
+    #address p{
+        display: inline;
+        width: 80%;
+    } 
+    .footer-content div p img{
+        margin-right: 5vw;
+    }   
+    
+}
+
+
+/**************** MEaxA QUERY FOR SCREEN SIZE WITH MAX-WIDTH OF 425PX***************************/
+@media screen and (min-width: 376px )and (max-width: 540px) {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    button{
+        width: 70vw;
+    }
+/********* END OF GLOBAL STYLING COMPONENTS   *****************/
+    nav{
+        display: flex;
+        flex: row nowrap;
+        width: 100vw;
+        padding: 4VW 6vw; 
+        justify-content:space-between;
+    }
+    nav img{
+        width: 15%;
+    }
+    nav div{
+        width: 75%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav div a{
+        margin: 0 1%;
+    }
+    header .intro-img{
+        width: 70%;
+        /*margin: auto;*/
+    }
+    
+/***        STYLING GET STARTED SECTION             ***/
+    .get-started{
+        height: 40vh;
+        background-image: url(images/bg-curvy-mobile.svg);
+        
+    }
+    .get-started h1{
+        width: 90vw;
+        
+        font-size: 1.7em;
+        
+    }
+    .get-started p{
+        width: 80vw;
+    }    
+    
+/****************************   STYLING SERVICES SECTION   ****************************/
+    .services-testimonials{
+        margin:0;
+        padding: 1em 0;
+    }
+    .service-grid{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2em;
+    }
+    .grid-box{
+        padding: 1em;
+        text-align: center;
+    }
+    .grid-box h4{
+        font-size: 1.2em;
+    }
+    .grid-box p{
+        font-size: 1.1em;
+    }
+    .productive-box{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }   
+    .productive-box img{
+        width: 80%;
+    }
+    .productive-box div{
+        display: inline-block;
+        width: 80%;
+        flex-flow: column;
+        align-items: start;
+        justify-content: center;
+        gap: .4em;    
+    }
+    .productive-box div h2{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .productive-box div p{
+        width: 100%;
+        font-size: 1.2em;
+    }
+    
+/** testimonials**/
+
+    .testimonials{
+        display:block;
+        padding: 0 5%;
+        margin-top: 10em;
+    }
+    .testominials-box{
+        display:grid;
+        grid-template-columns: 90%;
+        gap:1em;
+    }
+    .profile{
+        padding: 1em;
+        background-color: var(--testimonials-background);
+    }
+    .profile p{
+       font-size: 1.1em
+    }
+    .profile img{
+        margin: 1.6em 0;
+        border-radius: 50% ;
+        width: 15%;
+        float: left;
+    }
+  
+    .e-access{
+        width: 90%;
+        padding: 2.5em;
+    }
+    .e-access p{
+        font-size: 1.1em;
+        margin: 1.5em 0;
+    }
+    input{
+        padding: 15px;
+        width: 100%;
+        border-radius: 20px;
+        border: none;
+    }
+    .e-access button{
+        margin: 2em 0;
+        width: 80%;
+    } 
+    
+
+/****** styling the footer************/
+    footer{
+        padding: 5%;
+    }
+    #footer-logo{
+        margin-top: 10em;
+        width:40%;
+    }
+    .footer-content{
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: 100%;
+
+    }
+    .footer-content div{
+        margin: 1em 0;
+    }
+    .footer-content div p{
+        margin-bottom: 1.4vh;
+        font-size: 1.2em;
+    }
+    #address{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    #address img{
+        width: 4vw;
+        height: 4vh;
+    }
+    #address p{
+        display: inline;
+        width: 80%;
+    } 
+    .footer-content div p img{
+        margin-right: 5vw;
+    }   
+    
+}
+
+
+/**************** MEaxA QUERY FOR SCREEN SIZE WITH MAX-WIDTH OF 900PX***************************/
+@media screen and (min-width:541px) and (max-width: 900px) {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    button{
+        width: 35vw;
+        font-size: .8em;
+        font-weight: 400;
+    }
+    body{
+        font-size: 14px;
+    }
+/********* END OF GLOBAL STYLING COMPONENTS   *****************/
+    nav{
+        display: flex;
+        flex: row nowrap;
+        width: 100vw;
+        padding: 4VW 6vw; 
+        justify-content:space-between;
+    }
+    nav img{
+        width: 15%;
+    }
+    nav div{
+        width: 75%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav div a{
+        margin: 0 1%;
+    }
+    header .intro-img{
+        width: 70%;
+        /*margin: auto;*/
+    }
+    
+/***        STYLING GET STARTED SECTION             ***/
+    .get-started{
+        height: 40vh;
+        background-image: url(images/bg-curvy-mobile.svg);
+        
+    }
+    .get-started h1{
+        width: 70vw;
+        font-size: 1.7em;
+        
+    }
+    .get-started p{
+        width: 60vw;
+        font-size: 1.2em;
+    }    
+    
+/****************************   STYLING SERVICES SECTION   ****************************/
+    .services-testimonials{
+        margin:0;
+        padding: 1em 0;
+    }
+    .service-grid{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2em;
+    }
+    .grid-box{
+        padding: .1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+    .grid-box h4{
+        font-size: 1.7em;
+    }
+    .grid-box p{
+        border: 1px solid crimson;
+        font-size: 1em;
+        justify-self: center;
+        width: 50%;
+    }
+    .productive-box{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }   
+    .productive-box img{
+        width: 80%;
+    }
+    .productive-box div{
+        display: inline-block;
+        width: 80%;
+        flex-flow: column;
+        align-items: start;
+        justify-content: center;
+        gap: .4em;    
+    }
+    .productive-box div h2{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .productive-box div p{
+        width: 70%;
+        font-size: 1.2em;
+    }
+    
+/** testimonials**/
+
+    .testimonials{
+        display:block;
+        padding: 0 10%;
+        margin-top: 10em;
+    }
+    .testominials-box{
+        display:grid;
+        grid-template-columns: 80%;
+        gap:1em;
+    }
+    .profile{
+        padding: 1em;
+        background-color: var(--testimonials-background);
+    }
+    .profile p{
+       font-size: 1.1em
+    }
+    .profile img{
+        margin: 1.6em 0;
+        border-radius: 50% ;
+        width: 15%;
+        float: left;
+    }
+  
+    .e-access{
+        width: 90%;
+        padding: 2.5em;
+    }
+    .e-access p{
+        font-size: 1.1em;
+        margin: 1.5em 0;
+    }
+    input{
+        padding: 15px;
+        width: 60%;
+        border-radius: 20px;
+        border: none;
+    }
+    .e-access button{
+        margin: 2em 0;
+        width: 40%;
+    } 
+    
+
+/****** styling the footer************/
+    footer{
+        padding: 5%;
+    }
+    #footer-logo{
+        margin-top: 10em;
+        width:15%;
+    }
+    .footer-content{
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: 100%;
+
+    }
+    .footer-content div{
+        margin: 1em 0;
+    }
+    .footer-content div p{
+        margin-bottom: 1.4vh;
+        font-size: 1em;
+    }
+    #address{
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+    #address img{
+        width: 3vw;
+        height: 4vh;
+    }
+    #address p{
+        display: inline;
+        width: 62%;
+    } 
+    .footer-content div p img{
+        margin-right: 5vw;
+    }   
+    
+}
+
